@@ -1,0 +1,15 @@
+.hero-area{
+    padding: 0;
+    margin: 0;
+    background-color: red;
+}
+.hero-main{
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: bottom;
+}
+.hero2-image{
+    width: 50%;
+    height: 50%;
+}
