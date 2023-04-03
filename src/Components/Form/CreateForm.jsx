@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function CreateForm() {
+export default function CreateForm(props) {
+   const[title,setTitle] = useState('');
+
+   props.onQuery(title)
+
+   console.log(title);
+
     return (
+
         <div>
             <div className="">
-                <nav className='navbar bg-dark'>
+                <nav className='navbar bg-dark fixed-top col-md-3'>
                     <div className="navbar nav-item">
                         <span className='text-white'>Chaavie</span>
                     </div>
                 </nav>
-                <section>
-                    <h6 className="pt-5">
+                <section className='pt-5 m-2'>
+                    <h6 className="pt-3">
                         Setting up credentials...
                     </h6>
                 </section>
@@ -19,7 +26,7 @@ export default function CreateForm() {
                         <form action="" id='formid'>
                             <div className="mb-3">
                                 <label for="formGroupExampleInput" className="form-label">Your Brand Name</label>
-                                <input type="text" className="form-control" id="inputbrand" placeholder="Chaavie" name="brandname" />
+                                <input type="text" className="form-control" id="inputbrand" placeholder="Chaavie" name="brandname"  onChange={event => setTitle(event.target.value)}/>
                             </div>
 
                             <div className="mb-3">
@@ -68,9 +75,9 @@ export default function CreateForm() {
 
                         </form>
                         <div className="row">
-                            <button type="button" className="btn btn-outline-success" onclick="preview()">Preview</button>
+                            <button type="button" className="btn btn-outline-success" onclick="">Preview</button>
                             <button type="button" className="btn btn-outline-success " onclick="">Generate</button>
-                            <button type="button" className="btn btn-outline-danger" onclick="clearfields()">Cancel</button>
+                            <button type="button" className="btn btn-outline-danger" onclick="">Cancel</button>
                         </div>
                     </div>
                 </section>

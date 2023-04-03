@@ -5,7 +5,7 @@ export default function Template() {
     return (
         <div>
             <div className="row">
-            <nav className='navbar bg-warning'>
+            <nav className='navbar bg-warning d-flex justify-content-end p-2'>
                 <div className="navbar nav-item">
                     <span className='text-white'>Logout</span>
                 </div>
