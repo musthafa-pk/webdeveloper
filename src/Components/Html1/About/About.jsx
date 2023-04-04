@@ -1,7 +1,7 @@
 import React from 'react';
 import '../About/About.css';
 
-export default function About() {
+export default function About(props) {
   return (
     <div>
         <section className="about_section " id='about'>
@@ -15,19 +15,16 @@ export default function About() {
         <div className="col-md-6">
           <div className="detail-box">
             <div className="heading_container">
-              <h2>
-                About
-                
-              </h2>
+                {props.data.menu2 ? <h2>{props.data.menu2}</h2> : <h2>Menu2</h2> }
             </div>
-            <p>
+            {props.data.pagetext2 ? <p>{props.data.pagetext2}</p>:<p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            </p>
-            <p id='Readmore'>
+            </p>}
+            {/* <p id='Readmore'>
             &quot;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum impedit, rerum repellat perspiciatis molestias expedita? Obcaecati eaque, 
             repudiandae laborum odit ex dolore possimus adipisci nesciunt totam ad asperiores, magni numquam?&quot;
-            </p>
+            </p> */}
             <button className='more p-2'>Read More</button>
           </div>
         </div>

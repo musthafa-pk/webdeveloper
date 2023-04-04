@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <div className="hero-area">
         <div className="container pt-3">
             <div className="row pt-5 hero-main">
                 <div className="col-md-6 hero-1">
-                    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quod adipisci itaque ullam ex dolore! Quam illo ut iure voluptatibus accusantium quae optio exercitationem quidem magni maxime! A, eum et.</h1>
+                    {props.data.pagetext1 ? <h1 className='text-dark'>{props.data.pagetext1}</h1> : <h1 className='text-dark'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quod adipisci itaque ullam ex dolore! Quam illo ut iure voluptatibus accusantium quae optio exercitationem quidem magni maxime! A, eum et.</h1>}
                 </div>
                 <div className="col-md-6 hero2">
                     <img className='hero2-image' 
@@ -14,7 +14,6 @@ export default function Hero() {
                     alt="image"
                     width="90%" />
                 </div>
-
             </div>
         </div>
     </div>

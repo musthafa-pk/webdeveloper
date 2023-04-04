@@ -3,14 +3,16 @@ import About from './About/About'
 import Footer from './Footer/Footer'
 import Hero from './Hero/Hero'
 import Topbar from './Topbar/Topbar'
+import ContactUS from './ContactUs/ContactUs'
 
-export default function Html1() {
+export default function Html1(props) {
   return (
     <div>
-      <Topbar/>
-        <Hero/>
-        <About/>
-        <Footer/>
+      <Topbar data = {props.data}/>
+        <Hero data = {props.data}/>
+        <About data = {props.data}/>
+        <ContactUS data = {props.data}/>
+        <Footer data = {props.data}/>
     </div>
   )
 }

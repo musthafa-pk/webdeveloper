@@ -1,0 +1,87 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-login{
+    border-radius: 20px;;
+    height: 100%;
+    margin: 0 auto;
+    width:100%;
+    background-color: black;
+    padding:50px 130px;
+    margin: 30px;;
+}
+.apple-btn>img{
+    position: relative;
+    bottom: -4px;
+}
+.google-btn>span{
+    position: relative;
+    bottom: 3.5px;
+    left: 7px;
+}
+.btn{
+    width: 275px;
+    height: 35px;
+    position: relative;;
+    border:none;
+    background-color: #fff;
+    border-radius: 80vh;
+    cursor:pointer;
+}
+.hr-text>hr{
+    position: relative;
+    display: flex;
+    margin-inline: -12px;
+    margin-left: 2px;    
+    align-items:self-end;
+}
+.or>p{
+    position: relative;
+    bottom: 8px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 6px;
+    color:white;
+}
+/* .apple-btn>span{
+    position: relative;
+    bottom: -1px;
+    left: 5px;
+} */
+.forgot-btn{
+    background-color: black;
+    color:white;
+    border-color: white;
+    border: solid 1px gray;
+}
+footer{
+    color: gray;
+}
+footer a{
+    text-decoration: none;
+    color: #1D9BF0;
+}
+#info{
+    text-decoration: solid grey;
+    padding: 17px 6px;
+    width: 255px;
+    border: solid gray 1px;
+    background-color: black;
+    border-radius: 4px;
+    text-align: start;
+}
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

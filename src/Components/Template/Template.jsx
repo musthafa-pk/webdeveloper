@@ -1,7 +1,7 @@
 import React from 'react'
 import Html1 from '../Html1/Html1'
 
-export default function Template() {
+export default function Template(props) {
     return (
         <div>
             <div className="row">
@@ -12,7 +12,7 @@ export default function Template() {
             </nav>
             </div>
             <div className="row">
-                <Html1/>
+                <Html1 data = {props.data}/>
             </div>
 
         </div>
