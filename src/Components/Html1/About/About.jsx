@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../About/About.css';
 
 export default function About(props) {
+  const [isReadMore,setisReadMore]= useState(true);
+  const toggleReadMore =()=>{
+    setisReadMore(!isReadMore);
+  }
+  
+  
   return (
     <div>
         <section className="about_section " id='about'>
@@ -15,9 +21,9 @@ export default function About(props) {
         <div className="col-md-6">
           <div className="detail-box">
             <div className="heading_container">
-                {props.data.menu2 ? <h2>{props.data.menu2}</h2> : <h2>Menu2</h2> }
+                {props.data.menu2 ? <h2>{props.data.menu2}</h2> : <h2>About</h2> }
             </div>
-            {props.data.pagetext2 ? <p>{props.data.pagetext2}</p>:<p>
+             {props.data.pagetext2 ?   <p>{props.data.pagetext2}</p>:<p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </p>}
@@ -25,7 +31,7 @@ export default function About(props) {
             &quot;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum impedit, rerum repellat perspiciatis molestias expedita? Obcaecati eaque, 
             repudiandae laborum odit ex dolore possimus adipisci nesciunt totam ad asperiores, magni numquam?&quot;
             </p> */}
-            <button className='more p-2'>Read More</button>
+            {/* <button className='more p-2'>Read More</button> */}
           </div>
         </div>
       </div>

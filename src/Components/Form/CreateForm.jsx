@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './CreateForm.css'
 
 export default function CreateForm(props) {
    const[title,setTitle] = useState('');
@@ -14,8 +15,8 @@ export default function CreateForm(props) {
 
         <div>
             <div className="">
-                <nav className='navbar bg-dark fixed-top col-md-3'>
-                    <div className="navbar nav-item">
+                <nav className='navbar bg-primary fixed-top col-md-3 d-flex justify-content-center'>
+                    <div className="navbar nav-item ">
                         <span className='text-white'>Chaavie</span>
                     </div>
                 </nav>
@@ -26,10 +27,10 @@ export default function CreateForm(props) {
                 </section>
                 <section>
                     <div className="container">
-                        <form action="" id='formid'>
+                        <form action="" id='formid '>
                             <div className="mb-3">
                                 <label for="formGroupExampleInput" className="form-label">Your Brand Name</label>
-                                <input type="text" className="form-control" id="inputbrand" placeholder="Chaavie" name="brandname"  onChange={event => setTitle({...title,[event.target.name]: event.target.value})}/>
+                                <input type="text" className="form-control" id="inputbrand" placeholder="your brand name here" name="brandname"  onChange={event => setTitle({...title,[event.target.name]: event.target.value})}/>
                             </div>
 
                             <div className="mb-3">
@@ -47,6 +48,7 @@ export default function CreateForm(props) {
                                 <input type="text" className="form-control" id="Menu3" placeholder="Contact" name="menu3" onChange={event => setTitle({...title,[event.target.name]: event.target.value})} />
                             </div>
                             <hr />
+                            <h3>Hero Area</h3>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page1 Text</label>
                                 <textarea className="form-control" id="PageText1" rows="3" name="pagetext1" onChange={event => setTitle({...title,[event.target.name]: event.target.value})}></textarea>
@@ -57,6 +59,7 @@ export default function CreateForm(props) {
                                 <input className="form-control" type="file" id="Image1" name="image1" onChange={event => setTitle({...title,[event.target.name]: event.target.value})} />
                             </div>
                             <hr />
+                            <h3>Second Page</h3>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page2 Text</label>
                                 <textarea className="form-control" id="PageText2" rows="3" name="pagetext2" onChange={event => setTitle({...title,[event.target.name]: event.target.value})}></textarea>
@@ -67,9 +70,10 @@ export default function CreateForm(props) {
                                 <input className="form-control" type="file" id="Image2" name="image2" onclick={event => setTitle({...title,[event.target.name]: event.target.value})} />
                             </div>
                             <hr />
+                            <h3>Third Page</h3>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page3 Text</label>
-                                <textarea className="form-control" id="PageText3" rows="3" name="pagetext3"></textarea>
+                                <textarea className="form-control" id="PageText3" rows="3" name="pagetext3" onChange={event => setTitle({...title,[event.target.name]: event.target.value})}/>
                             </div>
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 3</label>
