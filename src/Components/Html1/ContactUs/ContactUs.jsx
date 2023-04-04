@@ -74,8 +74,8 @@ export default function ContactUs(props) {
         </div>
       </div>
       <div className="col-md-6 panel2">
-        {/* <img src="https://img.freepik.com/free-vector/happy-freelancer-with-computer-home-young-man-sitting-armchair-using-laptop-chatting-online-smiling-vector-illustration-distance-work-online-learning-freelance_74855-8401.jpg?w=826&t=st=1679547583~exp=1679548183~hmac=d0061d2bc9f4e873e49f89416e5efbb97449e209f7b89926a970b74a61e579eb"
-         alt="" width='50%' /> */}
+        {props.data.image3 ? <img src={props.data.image3}/>:<img src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?w=740&t=st=1679484953~exp=1679485553~hmac=7667330cf0386a02dbc6bd60fed1a459ff91ad48dc8b0bac7863680ab92f5d0c"
+         alt="" width='90%' />}
       </div>
 
         </div>

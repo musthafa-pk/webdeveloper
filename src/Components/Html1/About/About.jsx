@@ -15,7 +15,7 @@ export default function About(props) {
       <div className="row">
         <div className="col-md-6">
           <div className="img-box">
-            <img src='https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg?w=740&t=st=1679472376~exp=1679472976~hmac=f9c348f14e08b05a429f502617a3fac6d8e3b4e4db42ff3e20b8847dc6abf448'></img>
+            {props.data.image2 ? <img src={props.data.image2} alt="" /> : <img src='https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg?w=740&t=st=1679472376~exp=1679472976~hmac=f9c348f14e08b05a429f502617a3fac6d8e3b4e4db42ff3e20b8847dc6abf448'/>}
           </div>
         </div>
         <div className="col-md-6">

@@ -3,13 +3,22 @@ import './CreateForm.css'
 
 export default function CreateForm(props) {
    const[title,setTitle] = useState('');
+   const [file,setFile] = useState('');
+   function handleChange(e){
+    console.log(e.target.files);
+    const value = URL.createObjectURL(e.target.files[0]);
+    const name = e.target.name;
+    setFile(URL.createObjectURL(e.target.files[0]));
+    setTitle(URL.createObjectURL(e.target.files[0]));
+    setTitle({...title,[name]:value});
+   }
 //    const value=event.target.value;
  
    
 
-   props.onQuery(title)
+   props.onQuery(title,file)
 
-   console.log(title);
+   console.log(title,file);
 
     return (
 
@@ -56,7 +65,7 @@ export default function CreateForm(props) {
 
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 1</label>
-                                <input className="form-control" type="file" id="Image1" name="image1" onChange={event => setTitle({...title,[event.target.name]: event.target.value})} />
+                                <input className="form-control" type="file" id="Image1" name="image1" onChange={handleChange} />
                             </div>
                             <hr />
                             <h3>Second Page</h3>
@@ -67,7 +76,7 @@ export default function CreateForm(props) {
 
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 2</label>
-                                <input className="form-control" type="file" id="Image2" name="image2" onclick={event => setTitle({...title,[event.target.name]: event.target.value})} />
+                                <input className="form-control" type="file" id="Image2" name="image2" onChange={handleChange} />
                             </div>
                             <hr />
                             <h3>Third Page</h3>
@@ -77,7 +86,7 @@ export default function CreateForm(props) {
                             </div>
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 3</label>
-                                <input className="form-control" type="file" id="Image3" name="image3" onChange={event => setTitle({...title,[event.target.name]: event.target.value})} />
+                                <input className="form-control" type="file" id="Image3" name="image3" onChange={handleChange} />
                             </div>
 
                         </form>
@@ -85,6 +94,7 @@ export default function CreateForm(props) {
                             <button type="button" className="btn btn-outline-success" onclick="">Preview</button>
                             <button type="button" className="btn btn-outline-success " onclick="">Generate</button>
                             <button type="button" className="btn btn-outline-danger" onclick="">Cancel</button>
+                            {/* <img src={file}/> */}
                         </div>
                     </div>
                 </section>
