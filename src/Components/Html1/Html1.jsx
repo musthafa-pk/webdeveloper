@@ -6,14 +6,14 @@ import Topbar from './Topbar/Topbar'
 import ContactUS from './ContactUs/ContactUs'
 
 
-export default function Html1(props) {
+export default function Html1() {
   return (
     <div>
-      <Topbar data = {props.data}/>
-        <Hero data = {props.data}/>
-        <About data = {props.data}/>
-        <ContactUS data = {props.data}/>
-        <Footer data = {props.data}/>
+      <Topbar/>
+        <Hero/>
+        <About/>
+        <ContactUS/>
+        <Footer/>
     </div>
   )
 }
