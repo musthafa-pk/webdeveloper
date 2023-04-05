@@ -1,17 +1,22 @@
 import React, { useEffect, useState,useContext } from 'react'
 import './CreateForm.css'
 import { FormContext } from '../../Context/Context';
+import { Link } from 'react-router-dom';
 
 export default function CreateForm() {
     const{data,setdata}=useContext(FormContext)
-   const[title,setTitle] = useState('');
-   const [colors,setcolors] = useState('');
+//    const[title,setTitle] = useState('');
+//    const [colors,setcolors] = useState('');
 
    
 
 // props.onQuery(title)
 
 // console.log(title);
+function clear(){
+    window.location.reload();
+    console.log("hai");
+}
    function handleChange(e){
     console.log(e.target.files);
     const value = URL.createObjectURL(e.target.files[0]);
@@ -32,21 +37,27 @@ export default function CreateForm() {
     console.log(Hero);
     setdata({...data,"Hero":Hero});
    }
-   
-
+   function changePage2Color(Page2){
+    console.log(Page2);
+    setdata({...data,"Page2":Page2})
+   }
+   function changePage3Color(Page3){
+    console.log(Page3);
+    setdata({...data,"Page3":Page3})
+   }
     return (
 
         <div>
-            <div className="">
-                <nav className='navbar bg-primary fixed-top col-md-3'>
+            <div className="col-md-12">
+                <nav className='navbar bg-dark fixed-top col-md-3 form-nav'>
                     <div className="navbar nav-item ">
-                        <span className='text-white'>Chaavie</span>
+                        <span className='text-white mx-3'>Chaavie</span>
                     </div>
                 </nav>
-                <section className='pt-5 m-2'>
-                    <h6 className="pt-3">
+                <section className='pt-5'>
+                    <h5 className="pt-3">
                         Setting up credentials...
-                    </h6>
+                    </h5>
                 </section>
                 <section>
                     <div className="container">
@@ -58,12 +69,19 @@ export default function CreateForm() {
                                 <div className="color1" onClick={()=>changeColor("#ffc0cb")} ></div>
                                 <div className="color2" onClick={()=>changeColor('#97c6f8')}></div>
                                 <div className="color3" onClick={()=>changeColor('#9ae69c')}></div>
-                                <div className="color4" onClick={()=>changeColor('#0b8c63')}></div>
+                                <div className="color4" onClick={()=>changeColor('#97b45e')}></div>
                                 </div>
                             </div>
                             <div className="mb-3">
                                 <label for="formGroupExampleInput" className="form-label">Your Brand Name</label>
-                                <input type="text" className="form-control" id="inputbrand" placeholder="your brand name here" name="brandname"  onChange={event => setdata({...data,[event.target.name]: event.target.value})}/>
+                                <div className="row">
+                                    <div className="col-md-10">
+                                    <input type="text" className="form-control" id="inputbrand" placeholder="your brand name here" name="brandname"  onChange={event => setdata({...data,[event.target.name]: event.target.value})}/>
+                                    </div>
+                                    <div className="col-md-2">
+                                        <div className="colorball"></div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="mb-3">
@@ -88,7 +106,7 @@ export default function CreateForm() {
                                 <div className="color1" onClick={()=>changeHeroColor("#ffc0cb")} ></div>
                                 <div className="color2" onClick={()=>changeHeroColor('#97c6f8')}></div>
                                 <div className="color3" onClick={()=>changeHeroColor('#9ae69c')}></div>
-                                <div className="color4" onClick={()=>changeHeroColor('#0b8c63')}></div>
+                                <div className="color4" onClick={()=>changeHeroColor('#97b45e')}></div>
                                 </div>
                             </div>
                             <div className="form-group">
@@ -102,6 +120,15 @@ export default function CreateForm() {
                             </div>
                             <hr />
                             <h3>Second Page</h3>
+                            <div className="col-mb-3">
+                                <label htmlFor="formGroupExampleInput" className='form-label'>Pick Page2 Color</label>
+                                <div className="row color-panel d-flex justify-content-center">
+                                <div className="color1" onClick={()=>changePage2Color("#ffc0cb")}></div>
+                                <div className="color2" onClick={()=>changePage2Color('#97c6f8')}></div>
+                                <div className="color3" onClick={()=>changePage2Color('#9ae69c')}></div>
+                                <div className="color4" onClick={()=>changePage2Color('#97b45e')}></div>
+                                </div>
+                            </div>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page2 Text</label>
                                 <textarea className="form-control" id="PageText2" rows="3" name="pagetext2" onChange={event => setdata({...data,[event.target.name]: event.target.value})}></textarea>
@@ -113,6 +140,15 @@ export default function CreateForm() {
                             </div>
                             <hr />
                             <h3>Third Page</h3>
+                            <div className="col-mb-3">
+                                <label htmlFor="formGroupExampleInput" className='form-label'>Pick Page3 Color</label>
+                                <div className="row color-panel">
+                                <div className="color1" onClick={()=>changePage3Color("#ffc0cb")} ></div>
+                                <div className="color2" onClick={()=>changePage3Color('#97c6f8')}></div>
+                                <div className="color3" onClick={()=>changePage3Color('#9ae69c')}></div>
+                                <div className="color4" onClick={()=>changePage3Color('#97b45e')}></div>
+                                </div>
+                            </div>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page3 Text</label>
                                 <textarea className="form-control" id="PageText3" rows="3" name="pagetext3" onChange={event => setdata({...data,[event.target.name]: event.target.value})}/>
@@ -130,12 +166,11 @@ export default function CreateForm() {
                                 <input type="text" className="form-control" id="Mail" placeholder="Mail" name="mail" onChange={event => setdata({...data,[event.target.name]: event.target.value})} />
                             </div>
                             
-
                         </form>
                         <div className="row">
-                            <button type="button" className="btn btn-outline-success" onclick="">Preview</button>
+                            <Link to="/template1"><button type="button" className="btn btn-outline-success" onclick="">Preview</button></Link>
                             <button type="button" className="btn btn-outline-success " onclick="">Generate</button>
-                            <button type="button" className="btn btn-outline-danger" onclick="">Cancel</button>
+                            <button type="button" className="btn btn-outline-danger" onclick={clear}>Cancel</button>
                             {/* <img src={file}/> */}
                         </div>
                     </div>

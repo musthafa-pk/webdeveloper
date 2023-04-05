@@ -12,7 +12,7 @@ export default function About() {
   
   return (
     <div>
-        <section className="about_section " id='about'>
+        <section className="about_section " id='about' style={{backgroundColor:data.Page2}}>
     <div className="container">
       <div className="row">
         <div className="col-md-6">

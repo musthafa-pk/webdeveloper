@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CreateForm from '../Form/CreateForm'
 import Template from '../Template/Template'
-import { FormContext } from '../../Context/Context'
+// import { FormContext } from '../../Context/Context'
 
 export default function Home() {
     // const [data,setdata] = useState('');
@@ -10,8 +10,8 @@ export default function Home() {
     return (
 
         <div>
-            <div className="row">
-                <FormContext.Provider value={{data,setdata}}>
+            <div className="row m-0">
+                {/* <FormContext.Provider value={{data,setdata}}> */}
                     <div className="col-md-3">
                         {/* <CreateForm onQuery={setdata}/> */}
                         <CreateForm />
@@ -20,7 +20,7 @@ export default function Home() {
                         {/* <Template data={data}/> */}
                         <Template />
                     </div>
-                </FormContext.Provider>
+                {/* </FormContext.Provider> */}
             </div>
         </div>
 

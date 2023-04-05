@@ -6,7 +6,7 @@ export default function ContactUs() {
   const {data,setdata} = useContext(FormContext)
   return (
     <div>
-      <section id='contact'>
+      <section id='contact' style={{backgroundColor:data.Page3}}>
       <div className="container">
         <div className="row">
         <div className="col-md-6 panel1">
