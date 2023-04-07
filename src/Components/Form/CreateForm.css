@@ -1,3 +1,6 @@
+.sidecontainer{
+    background-color: #97c6f8;
+}
 .form-nav{
     
 }
@@ -31,7 +34,7 @@
     
 }
 
-#colorball{
+.colorball{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -40,5 +43,8 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+.colorball-page{
+    margin-top: 25px;
 }
 

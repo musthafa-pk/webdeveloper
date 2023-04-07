@@ -25,14 +25,10 @@ export default function About() {
             <div className="heading_container">
                 {data.menu2 ? <h2>{data.menu2}</h2> : <h2>About</h2> }
             </div>
-             {data.pagetext2 ?   <p>{data.pagetext2}</p>:<p>
+             {data.pagetext2 ?   <p style={{color:data.pagetextcolor2}}>{data.pagetext2}</p>:<p style={{color:data.pagetextcolor2}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             </p>}
-            <p id='Readmore'>
-            &quot;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum impedit, rerum repellat perspiciatis molestias expedita? Obcaecati eaque, 
-            repudiandae laborum odit ex dolore possimus adipisci nesciunt totam ad asperiores, magni numquam?&quot;
-            </p>
             <button className='more p-2'>Read More</button>
           </div>
         </div>

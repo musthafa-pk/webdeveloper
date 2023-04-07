@@ -27,14 +27,13 @@ export default function Hero() {
             <div className="row">
                 <div className="col-md-6">
                     <div className="hero-text-box">
-                    {data.pagetext1 ? <p>{data.pagetext1}</p> :<p className='hero-text' style={{color:data.textcolor1}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ipsam. Distinctio eligendi laborum veniam harum corrupti praesentium pariatur voluptatum explicabo molestias doloremque aspernatur, quae quos in recusandae reiciendis? Molestias, error.</p>}
+                    {data.pagetext1 ? <p style={{color:data.pagetextcolor1}}>{data.pagetext1}</p> :<p className='hero-text' style={{color:data.pagetextcolor1}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ipsam. Distinctio eligendi laborum veniam harum corrupti praesentium pariatur voluptatum explicabo molestias doloremque aspernatur, quae quos in recusandae reiciendis? Molestias, error.</p>}
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div className="img-wrap">
                     {data.image1 ? <img src={data.image1} alt="" />: <img src="/images/webdeveloper1.avif" alt=""/>}
                     </div>
-                   
                 </div>
             </div>
         </div>
