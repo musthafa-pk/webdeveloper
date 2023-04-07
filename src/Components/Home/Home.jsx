@@ -12,11 +12,11 @@ export default function Home() {
         <div>
             <div className="row m-0">
                 {/* <FormContext.Provider value={{data,setdata}}> */}
-                    <div className="col-md-3">
+                    <div className="col-md-3 side-scroll">
                         {/* <CreateForm onQuery={setdata}/> */}
                         <CreateForm />
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-md-9 side-scroll">
                         {/* <Template data={data}/> */}
                         <Template />
                     </div>

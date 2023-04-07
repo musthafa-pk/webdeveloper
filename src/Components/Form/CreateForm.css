@@ -1,3 +1,9 @@
+.side-scroll{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+}
 .sidecontainer{
     background-color: #97c6f8;
 }

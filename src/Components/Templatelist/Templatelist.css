@@ -1,0 +1,9 @@
+.side1{
+    border: 1px solid red;
+    background-color: aquamarine;
+}
+
+.side2{
+    height: 90vh;
+    width: 100%;
+}

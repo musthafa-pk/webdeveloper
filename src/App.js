@@ -11,6 +11,7 @@ import Html1 from './Components/Html1/Html1';
 import Hero from './Components/Html1/Hero/Hero';
 import About from './Components/Html1/About/About';
 import ContactUs from './Components/Html1/ContactUs/ContactUs';
+import Templatelist from './Components/Templatelist/Templatelist';
 
 function App() {
   const [data,setdata] = useState('');
@@ -26,6 +27,7 @@ function App() {
         <Route path='/home' element={<Hero/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<ContactUs/>}></Route>
+        <Route path='/templates' element={<Templatelist/>}></Route>
       </Routes>
       </BrowserRouter>
       </FormContext.Provider>
