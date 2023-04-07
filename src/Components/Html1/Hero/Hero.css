@@ -1,16 +1,25 @@
-.hero-area{
-    padding: 0;
-    margin: 0;
-    background-color: red;
+.container{
+    height: 90vh;
+    width: 100%;
 }
-.hero-main{
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-    background-position: bottom;
+.hero-body{
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    display: inline block;
+    /* background-image: url('../../../../public/images/backimage.jpg'); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
 }
-
-.hero2-image{
-    width: 50%;
-    height: 50%;
+.hero-body img{
+    width: 100%;
+}
+.hero-text-box{
+    margin-top: 35px;
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+}
+.img-wrap{
+    margin-top: 35px;
 }

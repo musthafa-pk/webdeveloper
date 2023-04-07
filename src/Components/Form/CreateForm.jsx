@@ -45,6 +45,7 @@ function clear(){
     console.log(Page3);
     setdata({...data,"Page3":Page3})
    }
+
     return (
 
         <div>
@@ -79,7 +80,10 @@ function clear(){
                                     <input type="text" className="form-control" id="inputbrand" placeholder="your brand name here" name="brandname"  onChange={event => setdata({...data,[event.target.name]: event.target.value})}/>
                                     </div>
                                     <div className="col-md-2">
-                                        <div className="colorball"></div>
+                                        <div className="colorball-wrap">
+                                        <input type="color" name="textcolor1" id="colorball" value="#002e5b" className='colorball' onChange={event => setdata({...data,[event.target.name]: event.target.value})} />
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -173,6 +177,8 @@ function clear(){
                             <button type="button" className="btn btn-outline-danger" onclick={clear}>Cancel</button>
                             {/* <img src={file}/> */}
                         </div>
+
+                        
                     </div>
                 </section>
             </div>

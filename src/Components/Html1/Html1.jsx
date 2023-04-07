@@ -9,7 +9,7 @@ import ContactUS from './ContactUs/ContactUs'
 export default function Html1() {
 
   return (
-    <div>
+    <div className='col-md-12'>
       <Topbar/>
         <Hero/>
         <About/>
