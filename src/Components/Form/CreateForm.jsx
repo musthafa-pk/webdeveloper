@@ -116,6 +116,20 @@ export default function CreateForm() {
                                     <div className="color4" onClick={() => changeHeroColor('#97b45e')}></div>
                                 </div>
                             </div>
+                            <div className="mb-3">
+                                <label for="formGroupExampleInput" className="form-label">Hero Text</label>
+                                <div className="row">
+                                    <div className="col-md-10">
+                                        <input type="text" className="form-control" id="Hero-text" placeholder="Hero text here" name="herotext" maxLength="55" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                    </div>
+                                    <div className="col-md-2">
+                                        <div className="colorball-wrap">
+                                            <input type="color" name="herotextcolor" id="colorball" value="#000000" className='colorball' onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                             <div className="row">
                                 <div className="col-md-9">
                                     <div className="form-group">
@@ -139,7 +153,7 @@ export default function CreateForm() {
                             <h3>Second Page</h3>
                             <div className="col-mb-3">
                                 <label htmlFor="formGroupExampleInput" className='form-label'>Pick Page2 Color</label>
-                                <div className="row color-panel d-flex justify-content-center">
+                                <div className="row color-panel">
                                     <div className="color1" onClick={() => changePage2Color("#ffc0cb")}></div>
                                     <div className="color2" onClick={() => changePage2Color('#97c6f8')}></div>
                                     <div className="color3" onClick={() => changePage2Color('#9ae69c')}></div>
@@ -196,8 +210,8 @@ export default function CreateForm() {
                         </form>
                         <div className="row">
                             <Link to="/template1"><button type="button" className="btn btn-outline-success" onclick="">Preview</button></Link>
-                            <button type="button" className="btn btn-outline-success " onclick="">Generate</button>
-                            <button type="button" className="btn btn-outline-danger" onclick={clear}>Cancel</button>
+                            <Link to=""><button type="button" className="btn btn-outline-success " onclick="">Generate</button></Link>
+                            <Link to=""><button type="button" className="btn btn-outline-danger" onclick={clear}>Cancel</button></Link>
                             {/* <img src={file}/> */}
                         </div>
 

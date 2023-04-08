@@ -27,7 +27,7 @@ export default function Hero() {
                 <div className="row">
                     <div className="col-md-6">
                         <div className="heading">
-                           <span className='hero-heading'> SmartMoves,Smart People,Smart Solutions. </span>   
+                           {data.herotext ? <span className='hero-heading' style={{color:data.herotextcolor}}>{data.herotext}</span> : <span className='hero-heading' style={{color:data.herotextcolor}}> Smart Moves,Smart People,Smart Solutions. </span>   }
                         </div>
                         <div className="hero-text-box">
                             {data.pagetext1 ? <p style={{ color: data.pagetextcolor1 }}>{data.pagetext1}</p> : <p className='hero-text' style={{ color: data.pagetextcolor1 }}>At Chaavie, our focus is always the success of our customer. With Digital being the new buzz and the way of business, we can help you navigate the digital cross winds and chart your way to success. Our way of business is built on trust, innovation and delivering the best value to our customers.</p>}
@@ -40,7 +40,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <hr />
+        
         </div>
     )
 }

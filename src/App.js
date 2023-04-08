@@ -11,6 +11,7 @@ import Hero from './Components/Html1/Hero/Hero';
 import About from './Components/Html1/About/About';
 import ContactUs from './Components/Html1/ContactUs/ContactUs';
 import Templatelist from './Components/Templatelist/Templatelist';
+import Html2 from './Components/Html2/Html2';
 function App() {
   const [data,setdata] = useState('');
   return (
@@ -18,9 +19,12 @@ function App() {
       <FormContext.Provider value={{data,setdata}}>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
+        {/* <Route path='/' element={<Home/>}></Route> */}
+        <Route path='/' element={<Html1/>}></Route>
+        <Route path='/studio' element={<Home/>}></Route>
         <Route path='/topbar' element={<Topbar/>}></Route>
         <Route path='/template1' element={<Html1/>}></Route>
+        <Route path='/template2' element={<Html2/>}></Route>
         <Route path='/home' element={<Hero/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<ContactUs/>}></Route>
