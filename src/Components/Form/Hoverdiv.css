@@ -1,0 +1,11 @@
+.hide{
+    display: none;
+}
+.imagehov .hide{
+    display: block;
+    color: palegoldenrod;
+    background-color: black;
+    border: dotted;
+    border-width: 1px;
+
+}

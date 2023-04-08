@@ -49,19 +49,19 @@ export default function CreateForm() {
     return (
 
         <div>
-            <div className="col-md-12 container">
-                <nav className='navbar bg-dark fixed-top col-md-3 form-nav'>
+            <div className="col-md-12">
+                {/* <nav className='navbar bg-dark fixed-top col-md-3 form-nav'>
                     <div className="navbar nav-item ">
                         <span className='text-white mx-3'>Chaavie</span>
                     </div>
-                </nav>
+                </nav> */}
                 <section className='pt-5'>
                     <h5 className="pt-3">
                         Setting up credentials...
                     </h5>
                 </section>
                 <section>
-                    <div className="container">
+                    <div className="">
                         <form action="" id='formid ' className='form-group'>
                             <h3>Topbar</h3>
                             <div className="col-mb-3">
@@ -77,7 +77,7 @@ export default function CreateForm() {
                                 <label for="formGroupExampleInput" className="form-label">Your Brand Name</label>
                                 <div className="row">
                                     <div className="col-md-10">
-                                        <input type="text" className="form-control" id="inputbrand" placeholder="your brand name here" name="brandname" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                        <input type="text" className="form-control" id="inputbrand" placeholder="your brand name here" name="brandname" maxLength="25" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                     </div>
                                     <div className="col-md-2">
                                         <div className="colorball-wrap">
@@ -89,18 +89,21 @@ export default function CreateForm() {
                             </div>
 
                             <div className="mb-3">
-                                <label for="formGroupExampleInput2" className="form-label">Page Heading</label>
-                                <input type="text" className="form-control" id="Menu1" placeholder="Home" name="menu1" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <label for="formGroupExampleInput2" className="form-label label-page-heading">Page Heading</label>
+                                <div className="hide">
+                                    <span>Pick background less images for best result</span>
+                                </div>
+                                <input type="text" className="form-control" id="Menu1" placeholder="Home" name="menu1" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
 
                             <div className="mb-3">
                                 <label for="formGroupExampleInput2" className="form-label">Page Heading</label>
-                                <input type="text" className="form-control" id="Menu2" placeholder="About" name="menu2" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Menu2" placeholder="About" name="menu2" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
 
                             <div className="mb-3">
                                 <label for="formGroupExampleInput2" className="form-label">Page Heading</label>
-                                <input type="text" className="form-control" id="Menu3" placeholder="Contact" name="menu3" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Menu3" placeholder="Contact" name="menu3" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
                             <hr />
                             <h3>Hero Area</h3>
@@ -117,7 +120,7 @@ export default function CreateForm() {
                                 <div className="col-md-9">
                                     <div className="form-group">
                                         <label for="exampleFormControlTextarea1">Page1 Text</label>
-                                        <textarea className="form-control" id="PageText1" rows="3" name="pagetext1" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })}></textarea>
+                                        <textarea className="form-control" id="PageText1" rows="3" name="pagetext1" maxLength="499" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })}></textarea>
                                     </div>
                                 </div>
                                 <div className="col-md-3">
@@ -128,10 +131,8 @@ export default function CreateForm() {
                                 </div>
 
                             </div>
-
-
                             <div className="mb-3">
-                                <label for="formFile" className="form-label">Pick an image for page 1</label>
+                                <label for="formFile" className="form-label label-page-heading">Pick an image for page 1</label>
                                 <input className="form-control" type="file" id="Image1" name="image1" onChange={handleChange} />
                             </div>
                             <hr />
@@ -149,7 +150,7 @@ export default function CreateForm() {
                                 <div className="col-md-9">
                                 <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page2 Text</label>
-                                <textarea className="form-control" id="PageText2" rows="3" name="pagetext2" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })}></textarea>
+                                <textarea className="form-control" id="PageText2" rows="3" name="pagetext2" maxLength="599" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })}></textarea>
                             </div>
 
                                 </div>
@@ -159,8 +160,7 @@ export default function CreateForm() {
                                     </div>
                                 </div>
                             </div>
-                            
-
+                    
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 2</label>
                                 <input className="form-control" type="file" id="Image2" name="image2" onChange={handleChange} />
@@ -178,19 +178,19 @@ export default function CreateForm() {
                             </div>
                             <div className="form-group">
                                 <label for="exampleFormControlTextarea1">Page3 Text</label>
-                                <textarea className="form-control" id="PageText3" rows="3" name="pagetext3" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <textarea className="form-control" id="PageText3" rows="3" name="pagetext3" maxLength="350" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 3</label>
                                 <input className="form-control" type="file" id="Image3" name="image3" onChange={handleChange} />
                             </div>
                             <div className="mb-3">
-                                <label for="formGroupExampleInput2" className="form-label">Place</label>
-                                <input type="text" className="form-control" id="Place" placeholder="Place" name="place" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <label for="formGroupExampleInput2" className="form-label">Place,</label>
+                                <input type="text" className="form-control" id="Place" placeholder="Place,state,country" name="place" maxLength="30" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                 <label for="formGroupExampleInput2" className="form-label">Phone</label>
-                                <input type="text" className="form-control" id="Phone" placeholder="Phone" name="phone" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Phone" placeholder="+91 0987654321" name="phone"  maxLength="16" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                 <label for="formGroupExampleInput2" className="form-label">Mail</label>
-                                <input type="text" className="form-control" id="Mail" placeholder="Mail" name="mail" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Mail" placeholder="Mail" name="mail" maxLength="50" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
 
                         </form>

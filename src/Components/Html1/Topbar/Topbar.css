@@ -18,12 +18,12 @@ nav a{
 }
 #logo{
     font-size: 20px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #002e5b;
     font-weight: bold;
     float:left;
     /* padding: 20px; */
-    margin-left: 17%;
+    /* margin-left: 17%; */
 }
 #logo a{
     color: #002e5b;
@@ -32,4 +32,14 @@ nav a{
 /* .header{
     overflow: hidden;
     background-color: #ffe600;
+} */
+/* .movable{
+ position: absolute;
+  cursor: move;
+  color: black;
+  max-width: 215px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
 } */

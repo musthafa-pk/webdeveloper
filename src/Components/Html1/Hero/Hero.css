@@ -14,10 +14,15 @@
 .hero-body img{
     width: 100%;
 }
-.hero-text-box{
+.hero-heading{
     margin-top: 35px;
-    font-weight: 600;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.hero-text-box{
+    
+    font-weight: 200;
+    font-size: 28px;
     display: flex;
 }
 .img-wrap{
