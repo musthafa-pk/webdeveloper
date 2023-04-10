@@ -1,12 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import CreateForm from '../Form/CreateForm'
 import Template from '../Template/Template'
 import Mainbar from '../Mainbar/Mainbar';
+import ClipLoader from 'react-spinners/ClipLoader';
 // import { FormContext } from '../../Context/Context'
 
 export default function Home() {
     // const [data,setdata] = useState('');
     const [data, setdata] = useState('');
+
+    const[loading,setloading] = useState(false);
+
+    useEffect(()=>{
+        setloading(true)
+        setTimeout(()=>{
+            setloading(false)
+        },1000);
+    },[])
 
     return (
 
@@ -20,7 +30,12 @@ export default function Home() {
                 </div>
                 <div className="col-md-9 side-scroll">
                     {/* <Template data={data}/> */}
-                    <Template />
+                    {loading ? (
+                        <div className="loader">
+                             <ClipLoader size={30} color={'#f37f24'} loading={loading}/>
+                        </div>
+                   ):(<Template />)}
+                    
                 </div>
                 {/* </FormContext.Provider> */}
             </div>

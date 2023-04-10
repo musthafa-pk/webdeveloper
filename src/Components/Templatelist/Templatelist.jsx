@@ -9,6 +9,20 @@ export default function Templatelist() {
     const [temp1,settemp1] = useState(false);
     const [temp2,settemp2] = useState(false);
     const [temp3,settemp3] = useState(false);
+    // let a,b,c;
+    // function select(){
+    //     if(temp1===true){
+    //         settemp2(!temp2)
+    //         settemp3(!temp3)
+    //     }
+    //     else if(temp2 === true){
+    //         settemp1(!temp1)
+    //         settemp3(!temp3)
+    //     }else if(temp3=== true){
+    //         ;settemp1(!temp1)
+    //         settemp2(!temp2)
+    //     }
+    // }
     
     
     return (
@@ -28,14 +42,14 @@ export default function Templatelist() {
                                     </div>
                                 </li>
                                 <li className='list-group-item'>
-                                    <div className="card" onClick={()=>settemp2(!temp2 )}>
+                                    <div className="card" onClick={()=>settemp2(!temp2)}>
                                         <h4>Portfolio</h4>
                                         <img src="https://images.pexels.com/photos/177154/pexels-photo-177154.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
                                     </div>
                                 </li>
                                 <li className='list-group-item'>
                                     <div className="card" onClick="">
-                                        <h4>Nature Builders</h4>
+                                        <h4>Nature</h4>
                                         <img src="https://e1.pxfuel.com/desktop-wallpaper/906/140/desktop-wallpaper-3-lucky-good-luck-charm.jpg" alt="" />
                                     </div>
                                 </li>
@@ -49,8 +63,8 @@ export default function Templatelist() {
                                 
                                 {temp1 && <Html1/>}
                                 {temp2 && <Html2/>}
-
-                                {/* {isTapped  ? <Html1/> : 
+                            
+                                {/* {temp1  ? <Html1/> : 
                                    <p>Pick a template</p> 
                                  }
                                 {temp2 ? <Html2/> : 

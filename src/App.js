@@ -12,6 +12,7 @@ import About from './Components/Html1/About/About';
 import ContactUs from './Components/Html1/ContactUs/ContactUs';
 import Templatelist from './Components/Templatelist/Templatelist';
 import Html2 from './Components/Html2/Html2';
+
 function App() {
   const [data,setdata] = useState('');
   return (
@@ -29,7 +30,6 @@ function App() {
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<ContactUs/>}></Route>
         <Route path='/templates' element={<Templatelist/>}></Route>
-
       </Routes>
       </BrowserRouter>
       </FormContext.Provider>
