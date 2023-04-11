@@ -1,26 +1,14 @@
 import React from 'react'
-import './Html2.css'
 
-export default function Html2() {
-
+export default function Html3() {
   return (
-    <div id='template2'>
+    <div id='template3'>
+        <div>
       <nav class="navbar navbar-default navbar">
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Logo</a>
           </div>
-          {/* <div class="collapse navbar-collapse" id="navbars">
-            <div>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Home</a></li>
-              <li><a>Blog</a></li>
-              <li><a>About</a></li>
-            </ul>
-              
-            </div>
-            
-          </div> */}
           <nav className="navbar navbar-expand-lg navbar-light ">
             <div className="container-fluid">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,8 +33,8 @@ export default function Html2() {
 
       <div class="page-landing text-center">
         <div>
-          <h1>Hey,</h1>
-          <p>Welcome to my dome.</p>
+          <h1>Welcome</h1>
+          <p>Template 3.</p>
         </div>
       </div>
       <section id='home'>
@@ -100,6 +88,7 @@ export default function Html2() {
       </div>
 
     </div>
-
+      
+    </div>
   )
 }

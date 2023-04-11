@@ -1,11 +1,18 @@
 import React from 'react'
 import Html1 from '../Html1/Html1'
+import { PageContext } from '../../Context/Context'
+import Html2 from '../Html2/Html2';
+import Html3 from '../Html3/Html3';
+import { useContext } from 'react';
+
 
 export default function Template() {
+    const {selectpage,setselectpage} = useContext (PageContext);
     return (
         <div className=' col-md-12 p-0'>
             <div className="row">
-                <Html1/>
+                {selectpage.template1 === 'one' ? <Html1/> : selectpage.template2 === 'two' ? <Html2/> : selectpage.template3 === 'three' ? <Html3/> : <h1 className='d-flex justify-content-center mt-5'>choose template first</h1>}
+                {/* <Html1/> */}
             </div>
         </div>
     )

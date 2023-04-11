@@ -1,65 +1,77 @@
-
-.navbar-default{
-    background-color: rgba(0,0,0,0) ;  
-    border-bottom: none;
-    transition-duration: .4s;
-    transition-function: ease-in-out;
-    margin-bottom: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.navbar-default {
+  /* background-color: rgba(0, 0, 0, 0);
+  border-bottom: none;
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out; */
+  /* transition-function: ease-in-out; */
+  /* margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px; */
 }
-    
-     .navbar-default + .zoom-v{
-      padding-top:0;
-      padding-bottom:0;
-      background-color: rgba(0,0,0,1);
-      color: white;
-    }
-    
-    .navbar-brand{
-     color: white; 
-    }
-     navbar-brand:hover{
-        color: white;
-      }
-    
-    .navbar-toggle{
-      border: none;
-    }
-      .navbar-toggle .icon-bar{
-        background-color: white;
-      }
-    
-    .navbar-nav li a{    
-      
-          cursor: pointer;  
-          color: white;
-          height: 60px;
-          line-height: 60px;
-          padding-top:0;
-          padding-bottom:0;
-        }
+
+.navbar-default +.zoom-v {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  color: rgb(238, 230, 230);
+}
+
+.navbar-brand {
+  color: rgb(0, 0, 0);
+}
+
+.navbar-brand:hover {
+  color: rgb(255, 255, 255);
+
+}
 
 
-  
-  .page-landing{
-    height: 100%;
-    background-color: #e74c3c;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .section{
-     height: 100%;
-  }
-  .sec-bg{
-    background: transparent center center/cover no-repeat ;
-  }
-  .sec-bg-1{
-    background-color:#16a085;
-  }
-  .sec-bg-2{
-    background-color:#2980b9;
-  }
+/* .navbar-nav li a {
+  cursor: pointer;
+  color: rgb(51, 8, 8);
+  height: 60px;
+  line-height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+} */
+
+.page-landing {
+  height: 100vh;
+  background-color: #e74c3c;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  height: 100vh;
+}
+
+.sec-bg {
+  background: transparent center center/cover no-repeat;
+}
+
+.sec-bg-1 {
+  background-color: #16a085;
+}
+
+.sec-bg-2 {
+  background-color: #2980b9;
+}
+
+.sec-footer {
+  background-color: black;
+  height: 100px;
+  color: white;
+}
+
+.sec-footer h6 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+}

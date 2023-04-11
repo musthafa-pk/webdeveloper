@@ -11,16 +11,16 @@ export default function About() {
 
 
   return (
-    <div>
+    <div className='col-md-12'>
       <section className="about_section " id='about' style={{ backgroundColor: data.Page2 }}>
         <div className="container">
-          <div className="row">
-            <div className="col-md-6">
+          <div className="row col-md-12">
+            <div className="col-sm-6">
               <div className="img-box mt-5">
                 {data.image2 ? <img src={data.image2} alt="" /> : <img src='/images/aboutimagpng.png' />}
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <div className="detail-box">
                 <div className="heading_container">
                   {data.menu2 ? <h2>{data.menu2}</h2> : <h2>About</h2>}

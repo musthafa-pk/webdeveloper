@@ -22,8 +22,8 @@ export default function Hero() {
         //         </div>
         //     </div>
         // </div>
-        <div className='hero-body'>
-            <div className="container" style={{ backgroundColor: data.Hero }}>
+        <div className='hero-body col-md-12'  style={{ backgroundColor: data.Hero }}>
+            <div className="container">
                 <div className="row">
                     <div className="col-md-6">
                         <div className="heading">
@@ -35,7 +35,7 @@ export default function Hero() {
                     </div>
                     <div className="col-md-6">
                         <div className="img-wrap">
-                            {data.image1 ? <img src={data.image1} alt="" /> : <img src="/images/kindpng.png" alt="" />}
+                            {data.image1 ? <img src={data.image1} alt="developer image" /> : <img src="/images/kindpng.png" alt="developer image" />}
                         </div>
                     </div>
                 </div>
