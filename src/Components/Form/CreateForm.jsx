@@ -210,7 +210,7 @@ export default function CreateForm() {
                         </form>
                         <div className="row">
                             <Link to="/template1"><button type="button" className="btn btn-outline-success" onclick="">Preview</button></Link>
-                            <Link to=""><button type="button" className="btn btn-outline-success " onclick="">Generate</button></Link>
+                            <Link to="/completed"><button type="button" className="btn btn-outline-success " onclick="">Generate</button></Link>
                             <Link to=""><button type="button" className="btn btn-outline-danger" onclick={clear}>Cancel</button></Link>
                             {/* <img src={file}/> */}
                         </div>

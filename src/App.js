@@ -13,7 +13,9 @@ import ContactUs from './Components/Html1/ContactUs/ContactUs';
 import Templatelist from './Components/Templatelist/Templatelist';
 import Html2 from './Components/Html2/Html2';
 import Html3 from './Components/Html3/Html3';
-
+import Generated from './Components/Generated/Generated';
+import Index from './Components/Landing/Index';
+import Startinpage from './Components/Landing/Startinpage';
 function App() {
   const [data,setdata] = useState('');
   const [selectpage,setselectpage] = useState('');
@@ -24,7 +26,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         {/* <Route path='/' element={<Home/>}></Route> */}
-        <Route path='/' element={<Html1/>}></Route>
+        <Route path='/' element={<Index/>}></Route>
         <Route path='/studio' element={<Home/>}></Route>
         <Route path='/topbar' element={<Topbar/>}></Route>
         <Route path='/template1' element={<Html1/>}></Route>
@@ -34,6 +36,7 @@ function App() {
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<ContactUs/>}></Route>
         <Route path='/templates' element={<Templatelist/>}></Route>
+        <Route path='/completed' element={<Generated/>}></Route>
       </Routes>
       </BrowserRouter>
       </FormContext.Provider>
