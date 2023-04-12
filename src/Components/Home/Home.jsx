@@ -3,6 +3,7 @@ import CreateForm from '../Form/CreateForm'
 import Template from '../Template/Template'
 import Mainbar from '../Mainbar/Mainbar';
 import ClipLoader from 'react-spinners/ClipLoader';
+import Form2 from '../Form/Form2/Form2';
 // import { FormContext } from '../../Context/Context'
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
                 <div className="col-md-3 side-scroll">
                     {/* <CreateForm onQuery={setdata}/> */}
                     <CreateForm />
+                    {/* <Form2/> */}
                 </div>
                 <div className="col-md-9 side-scroll">
                     {/* <Template data={data}/> */}

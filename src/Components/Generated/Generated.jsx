@@ -17,7 +17,7 @@ export default function Generated() {
             <div>
                 <h1 className='text-dark'>Your page is Ready to visit</h1>
             </div>
-            <div className="card"><span> <a href="brandname@chaavie.com">https://www.freehost.com</a> </span></div>
+            <div className="card"><span> <a href="https://www.google.com">https:www.google.com</a> </span></div>
             
           </div>
         )}

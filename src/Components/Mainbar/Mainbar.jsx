@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 export default function Mainbar() {
   return (
     <div>
@@ -9,7 +10,7 @@ export default function Mainbar() {
                     <span className='Brand'>Chaavie Solutions</span>
                 </div>
                 <div className="navbar nav-item display-flex justify-content-end">
-                    <span className='text-white px-2'>Logout</span>
+                    <Link to="/"><span className='text-white px-2'>Logout</span></Link>
                 </div>
             </nav>
             

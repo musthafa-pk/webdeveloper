@@ -4,6 +4,7 @@
 }
 body{
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* scrollbar */
@@ -182,7 +183,6 @@ user-select: none;
 .section-one{
   height: 100vh;
   width: 100%;
-  /* background-image: url('/public/images/papper.jpg'); */
 }
 .top-left{
  position: absolute;
@@ -202,13 +202,14 @@ user-select: none;
 .started{
   position: absolute;
   color: white;
-  top: 400px;
+  top: 300px;
   left: 100px;
   font-size:30px;
   font-weight: 900;
   background-color: rgb(26, 17, 0);
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px; */
+  /* padding-right: 10px; */
+  padding: 15px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
  }
@@ -222,7 +223,7 @@ user-select: none;
 }
  .started {
   opacity: 1;
-  animation: fade 1s linear;
+  animation: fade 3s linear;
 }
 
 .seciton-two{
@@ -241,10 +242,50 @@ user-select: none;
 .bal{
   /* position: absolute; */
   top: 300px;
-  background-color: rgb(247, 249, 137);
+  background-color: #f9d053;  
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   color: rgb(31, 2, 72);
+}
+/* end of landingpage----- */
+.selected{
+  position: absolute;
+  background-color:#05741d;
+  margin-top: 150px;
+  width: 100%;
+  color: rgb(255, 251, 251);
+  padding-left: 10px;
+}
+/* pagenotefoundpage */
+.pagenotefound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32;
+  font-weight:900;
+  margin-top: 100px;
+}
+.pagenotefound2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 900;
+}
+/* .template_card{ */
+  /* background-color: rgb(215, 210, 210); */
+  /* background-image: url('../public/images/992651.png');
+  height: 500px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+} */
+.heropanel{
+  position:relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: #05741d; */
 }

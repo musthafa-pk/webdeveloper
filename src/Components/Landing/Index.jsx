@@ -43,15 +43,15 @@ export default function Index() {
                     </div>
                     <Link to="/templates">
                         <div className='started'>
-                            getting started
+                            getting started...
                         </div>
                     </Link>
                 </div>
             </section>
 
             <section id='sectwo'>
-                <div className="section-two">
-                    <div className="container pt-5">
+                <div className="section-two p-2">
+                    <div className="container pt-5 p-2">
                         <div className="row bal">
                             <h1 className='mt-5'>About</h1>
                             <div className="col-md-6 ">

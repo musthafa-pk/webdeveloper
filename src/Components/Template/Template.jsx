@@ -4,6 +4,7 @@ import { PageContext } from '../../Context/Context'
 import Html2 from '../Html2/Html2';
 import Html3 from '../Html3/Html3';
 import { useContext } from 'react';
+import PageNoteFound from '../PageNoteFound';
 
 
 export default function Template() {
@@ -11,7 +12,7 @@ export default function Template() {
     return (
         <div className=' col-md-12 p-0'>
             <div className="row">
-                {selectpage.template1 === 'one' ? <Html1/> : selectpage.template2 === 'two' ? <Html2/> : selectpage.template3 === 'three' ? <Html3/> : <h1 className='d-flex justify-content-center mt-5'>choose template first</h1>}
+                {selectpage.template1 === 'one' ? <Html1/> : selectpage.template2 === 'two' ? <Html2/> : selectpage.template3 === 'three' ? <Html3/> : <PageNoteFound/>}
                 {/* <Html1/> */}
             </div>
         </div>

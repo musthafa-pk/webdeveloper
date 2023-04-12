@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from 'react'
 import './CreateForm.css'
 import { FormContext } from '../../Context/Context';
 import { Link } from 'react-router-dom';
+import Html1 from '../Html1/Html1';
+import Html2 from '../Html2/Html2';
 
 export default function CreateForm() {
     const { data, setdata } = useContext(FormContext)
@@ -83,27 +85,25 @@ export default function CreateForm() {
                                         <div className="colorball-wrap">
                                             <input type="color" name="textcolor1" id="colorball" value="#002e5b" className='colorball' onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                             <div className="mb-3">
                                 <label for="formGroupExampleInput2" className="form-label label-page-heading">Page Heading</label>
                                 <div className="hide">
                                     <span>Pick background less images for best result</span>
                                 </div>
-                                <input type="text" className="form-control" id="Menu1" placeholder="Home" name="menu1" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Menu1" placeholder="Menu Name1" name="menu1" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
 
                             <div className="mb-3">
                                 <label for="formGroupExampleInput2" className="form-label">Page Heading</label>
-                                <input type="text" className="form-control" id="Menu2" placeholder="About" name="menu2" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Menu2" placeholder="Menu Name2" name="menu2" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
 
                             <div className="mb-3">
                                 <label for="formGroupExampleInput2" className="form-label">Page Heading</label>
-                                <input type="text" className="form-control" id="Menu3" placeholder="Contact" name="menu3" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Menu3" placeholder="Menu Name3 " name="menu3" maxLength="10" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
                             <hr />
                             <h3>Hero Area</h3>
@@ -126,7 +126,6 @@ export default function CreateForm() {
                                         <div className="colorball-wrap">
                                             <input type="color" name="herotextcolor" id="colorball" value="#000000" className='colorball' onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -141,9 +140,7 @@ export default function CreateForm() {
                                     <div className="colorball-page">
                                         <input type="color" name="pagetextcolor1" id="Pagetextcolor1" value="#000000" className='colorball' onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                     </div>
-
                                 </div>
-
                             </div>
                             <div className="mb-3">
                                 <label for="formFile" className="form-label label-page-heading">Pick an image for page 1</label>
@@ -162,19 +159,25 @@ export default function CreateForm() {
                             </div>
                             <div className="row">
                                 <div className="col-md-9">
-                                <div className="form-group">
-                                <label for="exampleFormControlTextarea1">Page2 Text</label>
-                                <textarea className="form-control" id="PageText2" rows="3" name="pagetext2" maxLength="599" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })}></textarea>
+                                    <div className="form-group">
+                                        <label for="exampleFormControlTextarea1">Page2 Para1</label>
+                                        <textarea className="form-control" id="PageText2" rows="3" name="pagetext2" maxLength="599" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })}></textarea>
+                                    </div>
+                                    <div className="form-group">
+                                <label for="exampleFormControlTextarea1">Page2 Para2</label>
+                                <textarea className="form-control" id="PageText22" rows="3" name="pagetext22" maxLength="350" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
-
+                            <div className="form-group">
+                                <label for="exampleFormControlTextarea1">Page2 Para3</label>
+                                <textarea className="form-control" id="PageText23" rows="3" name="pagetext23" maxLength="350" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                            </div>
                                 </div>
                                 <div className="col-md-3">
-                                <div className="colorball-page">
+                                    <div className="colorball-page">
                                         <input type="color" name="pagetextcolor2" id="Pagetextcolor2" value="#000000" className='colorball' onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                     </div>
                                 </div>
                             </div>
-                    
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 2</label>
                                 <input className="form-control" type="file" id="Image2" name="image2" onChange={handleChange} />
@@ -191,8 +194,12 @@ export default function CreateForm() {
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label for="exampleFormControlTextarea1">Page3 Text</label>
+                                <label for="exampleFormControlTextarea1">Page3 Para1</label>
                                 <textarea className="form-control" id="PageText3" rows="3" name="pagetext3" maxLength="350" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                            </div>
+                            <div className="form-group">
+                                <label for="exampleFormControlTextarea1">Page3 Para2</label>
+                                <textarea className="form-control" id="PageText32" rows="3" name="pagetext32" maxLength="350" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
                             <div className="mb-3">
                                 <label for="formFile" className="form-label">Pick an image for page 3</label>
@@ -202,20 +209,18 @@ export default function CreateForm() {
                                 <label for="formGroupExampleInput2" className="form-label">Place,</label>
                                 <input type="text" className="form-control" id="Place" placeholder="Place,state,country" name="place" maxLength="30" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                 <label for="formGroupExampleInput2" className="form-label">Phone</label>
-                                <input type="text" className="form-control" id="Phone" placeholder="+91 0987654321" name="phone"  maxLength="16" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
+                                <input type="text" className="form-control" id="Phone" placeholder="+91 0987654321" name="phone" maxLength="16" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                                 <label for="formGroupExampleInput2" className="form-label">Mail</label>
                                 <input type="text" className="form-control" id="Mail" placeholder="Mail" name="mail" maxLength="50" onChange={event => setdata({ ...data, [event.target.name]: event.target.value })} />
                             </div>
-
                         </form>
                         <div className="row">
-                            <Link to="/template1"><button type="button" className="btn btn-outline-success" onclick="">Preview</button></Link>
+                            <Link to="/template2"><button type="button" className="btn btn-outline-success" onclick="">Preview</button></Link>
                             <Link to="/completed"><button type="button" className="btn btn-outline-success " onclick="">Generate</button></Link>
                             <Link to=""><button type="button" className="btn btn-outline-danger" onclick={clear}>Cancel</button></Link>
+                            <a href='template.html' download={<CreateForm />}>Download</a>
                             {/* <img src={file}/> */}
                         </div>
-
-
                     </div>
                 </section>
             </div>
